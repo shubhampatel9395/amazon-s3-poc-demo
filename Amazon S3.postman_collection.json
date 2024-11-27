@@ -1,0 +1,395 @@
+{
+	"info": {
+		"_postman_id": "46b57158-7a00-4b08-8afa-08f4063302dc",
+		"name": "Amazon S3",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17526928"
+	},
+	"item": [
+		{
+			"name": "Create Bucket",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/bucket/create/resume123453535",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"bucket",
+						"create",
+						"resume123453535"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/bucket/create/resume123453535",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"bucket",
+								"create",
+								"resume123453535"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain;charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "62"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 17 Nov 2024 13:16:31 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "Bucket Created \nBucket Name:-resume123453535\nregion:-us-east-2"
+				}
+			]
+		},
+		{
+			"name": "Get All Buckets",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/bucket/list",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"bucket",
+						"list"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/bucket/list",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"bucket",
+								"list"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 17 Nov 2024 13:17:26 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    \"resume123453535\"\n]"
+				}
+			]
+		},
+		{
+			"name": "Upload file to bucket",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/Admin/Downloads/views.txt"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/file/upload/resume123453535",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"file",
+						"upload",
+						"resume123453535"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/Admin/Downloads/views.txt"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/file/upload/resume123453535",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"file",
+								"upload",
+								"resume123453535"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain;charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "84"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 17 Nov 2024 13:18:10 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "File Uploaded Successfully \nFileName:- 7c5b91cb-cdc8-4ef2-90de-de64350c7a73views.txt"
+				}
+			]
+		},
+		{
+			"name": "Get All Bucket FIles",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/bucket/files/resume123453535",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"bucket",
+						"files",
+						"resume123453535"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/bucket/files/resume123453535",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"bucket",
+								"files",
+								"resume123453535"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 17 Nov 2024 13:18:26 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"fileName\": \"7c5b91cb-cdc8-4ef2-90de-de64350c7a73views.txt\",\n        \"fileSize\": 4882,\n        \"filePath\": \"f59122481b41ac69d718a7b78d88d839\",\n        \"file\": null\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Download File",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/file/download/resume123453535/7c5b91cb-cdc8-4ef2-90de-de64350c7a73views.txt",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"file",
+						"download",
+						"resume123453535",
+						"7c5b91cb-cdc8-4ef2-90de-de64350c7a73views.txt"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete file from bucket",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/file/delete/resume123453535/7c5b91cb-cdc8-4ef2-90de-de64350c7a73views.txt",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"file",
+						"delete",
+						"resume123453535",
+						"7c5b91cb-cdc8-4ef2-90de-de64350c7a73views.txt"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Soft Delete Bucket",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/bucket/delete/resume123453535",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"bucket",
+						"delete",
+						"resume123453535"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Hard Delete Bucket",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/bucket/delete/hard/{bucketName}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"bucket",
+						"delete",
+						"hard",
+						"{bucketName}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://localhost:9090"
+		}
+	]
+}
